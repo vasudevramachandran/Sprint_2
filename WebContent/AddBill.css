@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+
+.intro-header {
+   
+    background: url(../img/money dollar bills.jpg) no-repeat center center;
+    background-size: cover;
+}
