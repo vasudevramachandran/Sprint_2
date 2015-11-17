@@ -24,7 +24,7 @@
 	function assignValue(selectedId){
 		
 		document.getElementById("selectedGroupId").value = selectedId;
-		alert("set value"+ document.getElementById("selectedGroupId").value);
+		//alert("set value"+ document.getElementById("selectedGroupId").value);
 	}
 	
 </script>
@@ -37,7 +37,7 @@
 </form>
 <div id='cssmenu'>
 <ul>
-   <li><a href='#'><span>Home</span></a></li>
+   <li><a href='<%=request.getContextPath() %>/jsp/home.jsp'><span>Home</span></a></li>
    <li class='active has-sub'><a href='#'><span>Friends</span></a>
       <ul>
         <% User user = (User) session.getAttribute(CommonConstants.OBJ_USER);
@@ -63,8 +63,8 @@
    </li>
    <li><a href='FetchPageData?email='<%=session.getAttribute(CommonConstants.EMAIL) %>><span>Add Bill</span></a></li>
    <li><a href='ViewBillServlet?email='<%=session.getAttribute(CommonConstants.EMAIL) %>><span>View Bill</span></a></li>
-   <li><a href='FetchCreateGroup'><span>Create Group</span></a></li>
-   <li><a href='FetchCreateGroup'><span>My Groups</span></a>
+   <li><a href='FetchCreateGroup?email='<%=session.getAttribute(CommonConstants.EMAIL)%>><span>Create Group</span></a></li>
+   <li class="active has-sub"><a href='FetchCreateGroup?email='<%=session.getAttribute(CommonConstants.EMAIL) %>><span>My Groups</span></a>
 	   <ul>
 	   	<%
 	   		User userObj = (User) session.getAttribute(CommonConstants.OBJ_USER);

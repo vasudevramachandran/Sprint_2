@@ -1,6 +1,7 @@
 package com.uncc.fairshare.controller;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,9 +9,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.uncc.fairshare.constants.CommonConstants;
 import com.uncc.fairshare.helper.FriendsList;
+import com.uncc.fairshare.helper.User;
 import com.uncc.fairshare.impl.AddBillImpl;
 import com.uncc.fairshare.intf.AddBillIntf;
 import com.uncc.fairshare.intf.FetchBillIntf;
@@ -54,6 +57,10 @@ public class FetchCreateGroupDetails extends HttpServlet {
 			String email = (String)request.getSession(false).getAttribute(CommonConstants.EMAIL);
 			
 			FriendsList friendsList = new FriendsList();
+
+			HttpSession session = request.getSession(false);
+			User user = (User)session.getAttribute(CommonConstants.OBJ_USER);
+			HashMap<String, String> grp = user.getGroupMap();
 			
 			friendsList.setUserEmail(email);
 			AddBillIntf addBillObj ;

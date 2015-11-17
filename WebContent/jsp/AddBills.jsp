@@ -12,18 +12,18 @@
 </head>
 <script type="text/javascript">
 	function createBillObj(){
-		alert("called");
+		//alert("called");
 		var index;
 		
 		var billDesc = document.getElementById("billDescription");
 		if(billDesc.value == ""){
-			alert("Enter Bill Description");
+			//alert("Enter Bill Description");
 			billDesc.focus();
 			return false;
 		}
 		var billAmount = document.getElementById("billAmount");
 		if(billAmount.value == ""){
-			alert("Enter Bill Amount");
+			//alert("Enter Bill Amount");
 			billAmount.focus();
 			return false;
 		}
@@ -33,25 +33,25 @@
 		var userNameObj = document.getElementsByName("friendName")
 		for(i=0; i< elementObj.length ; i++){
 			
-			alert(elementObj[i].checked); 
+		//	alert(elementObj[i].checked); 
 			
 			if(elementObj[i].checked){
-				alert(userIdObj[i].value);
+			//	alert(userIdObj[i].value);
 				index = i+1;
 				break;
 			}
 		}
 		if(index >= 0){
-			alert("after if")
+			//alert("after if")
 			var friendId = userIdObj[index].value;
-			alert(friendId);
+	//		alert(friendId);
 			var friendName = userNameObj[index].value;
 			
 			document.getElementById("friendEmail").value = friendId;
 			document.getElementById("friendName").value = friendName;
 			
-			alert(" set email -- "+document.getElementById("friendEmail").value);
-			alert("set name ---- "+document.getElementById("friendName").value);
+		//	alert(" set email -- "+document.getElementById("friendEmail").value);
+		//	alert("set name ---- "+document.getElementById("friendName").value);
 			
 			//var url = "http://localhost:8085/FairShare/AddBill?userId=111&friendId="+friendId+
 				//	  "&billDesc="+billDesc.value+"&billAmount="+billAmount.value+"";

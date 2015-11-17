@@ -37,15 +37,28 @@
 				</div>
 			</div>
 	</div>
-	
-		<div>
+	<div class="mainbody">
+		<div class="innerDiv">
+			<div>
+				<span>Split By</span>
+			</div>
+			<div>
+				<span>Percent</span>
+				<span>Equally</span>
+				<span>Share</span>
+			</div>
+		</div>
+	</div>
+		
+		
+		<div class="">
 			<h4 align="center">Friends List</h4>
 		</div>
 		<%
 		  	HashMap friendsList = fetchDetails.getGroupMemberMap();
 		  	if(null != friendsList && friendsList.size() != 0 ){
 	  	%>
-	  	<div >
+	  	<div class="">
 			<table >
 				<thead>
 					<tr>
@@ -73,6 +86,7 @@
 			</table>
 			
 		</div>
+		
 		<%
 		  	}else{
 		%>

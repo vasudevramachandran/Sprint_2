@@ -47,8 +47,10 @@
 <body>
 
 <%@include file= "logoutJsp.jsp"%>
+<div>
+<div>
 <%@include file="sidenavbar.jsp" %>
-
+</div>
 
 	<div class="container">
 		<section id="content">
@@ -114,6 +116,7 @@
 	<%
 	  	}
 	%>
+	</div>
 	</div>
 </body>
 </html>

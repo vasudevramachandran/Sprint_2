@@ -516,7 +516,7 @@ table {
 	line-height: 24px;
 	margin: 30px auto;
 	text-align: left;
-	width: auto;
+	width: 500px;
 	max-width:90%;
 	height: auto;
 }	
@@ -612,7 +612,8 @@ tbody:hover tr:hover td {
 	font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
 	padding:10px 36px;
 	margin:10px;
-	position: relative;
+	position: absolute;
+	
 }
 .alert-box span {
 	font-weight:bold;
@@ -721,10 +722,10 @@ tbody:hover tr:hover td {
 /*-------------------- new Container class------------------*/
 .newContainer {
     width: 500px;
-    max-height: 500px;
+    max-height: 100%;
     margin: 10px;
     border: 1px solid #fff;
-    background-color: #ffffff;
+    background-color: #808080;
     box-shadow: 0px 2px 7px #292929;
     -moz-box-shadow: 0px 2px 7px #292929;
     -webkit-box-shadow: 0px 2px 7px #292929;
@@ -736,16 +737,21 @@ tbody:hover tr:hover td {
     float:right;
     align:right
 }
+.header{
+	background-color: #99ff33;
+}
 .mainbody,
 .header,
 .footer {
     padding: 5px;
+    max-height: 100%;
 }
 .mainbody {
     margin-top: 0;
     min-height: 150px;
     max-height: 388px;
     overflow: auto;
+    background-color: 
 }
 .header {
     height: 40px;
@@ -769,6 +775,13 @@ tbody:hover tr:hover td {
     -moz-border-radius-bottomright: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+.innerDiv{
+	background-color: #808080;
+	float: inherit;
+	display: inline-block;
+	
+	
 }
 
 /*---- my group div-----*/

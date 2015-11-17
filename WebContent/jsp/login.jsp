@@ -31,7 +31,7 @@
 
 <div class="container">
 	<section id="content">
-		<form action="../LoginServlet" method="post" enctype="application/x-www-form-urlencoded">
+		<form action="<%=request.getContextPath()%>/LoginServlet" method="post" enctype="application/x-www-form-urlencoded">
 			<h1>Login Form</h1> 
 			<div>
 				<input type="text" placeholder="Username" required="" id="email" name="email" />

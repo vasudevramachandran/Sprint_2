@@ -9,9 +9,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.uncc.fairshare.constants.CommonConstants;
 import com.uncc.fairshare.helper.CreateGroupDetail;
+import com.uncc.fairshare.helper.User;
 import com.uncc.fairshare.impl.CreateGroupImpl;
 import com.uncc.fairshare.intf.CreateGroupIntf;
 
@@ -55,7 +57,6 @@ public class CreateGroupServlet extends HttpServlet {
 		CreateGroupIntf createGroupImplObj = null;
 		
 		createGroupImplObj = new CreateGroupImpl();
-		
 		
 		if(null != request.getParameter(CommonConstants.JSP_GROUP_NAME) ||
 				null!= request.getParameter(CommonConstants.JSP_SEL_FRND_LIST)){
