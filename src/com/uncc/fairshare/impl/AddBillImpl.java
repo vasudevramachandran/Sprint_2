@@ -33,7 +33,7 @@ public class AddBillImpl implements AddBillIntf {
 	@Override
 	public int addBill(AddBillForFriend billObj) {
 		// TODO Auto-generated method stub
-		int addStatus = CommonConstants.INT_FAIlURE;
+		int addStatus = CommonConstants.INT_FAILURE;
 		
 		Connection conn = new DbConnect().getConnection();
 		

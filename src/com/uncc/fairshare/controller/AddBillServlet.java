@@ -73,14 +73,14 @@ public class AddBillServlet extends HttpServlet {
 		addBillObj.setFriendName((String)request.getParameter(CommonConstants.JSP_FRND_NAME));
 		
 			
-		int statusVal = CommonConstants.INT_FAIlURE;
+		int statusVal = CommonConstants.INT_FAILURE;
 		
 		statusVal = new AddBillImpl().addBill(addBillObj);
 		
 		if(statusVal == CommonConstants.INT_SUCCESS){
 			request.setAttribute("status", CommonConstants.INT_SUCCESS);
 		}else{
-			request.setAttribute("status", CommonConstants.INT_FAIlURE);
+			request.setAttribute("status", CommonConstants.INT_FAILURE);
 		}
 		
 		

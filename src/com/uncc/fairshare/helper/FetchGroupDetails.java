@@ -20,6 +20,7 @@ public class FetchGroupDetails {
 	
 	private HashMap<String, String> groupMemberMap;
 	private HashMap<String , String> billDetailsMap;
+	private HashMap<Integer, GroupBillDetails> groupBillDetails;
 
 	public int getGroupId() {
 		return groupId;
@@ -67,6 +68,15 @@ public class FetchGroupDetails {
 
 	public void setValidFetch(boolean isValidFetch) {
 		this.isValidFetch = isValidFetch;
+	}
+
+	public HashMap<Integer, GroupBillDetails> getGroupBillDetails() {
+		return groupBillDetails;
+	}
+
+	public void setGroupBillDetails(
+			HashMap<Integer, GroupBillDetails> groupBillDetails) {
+		this.groupBillDetails = groupBillDetails;
 	} 
 
 }

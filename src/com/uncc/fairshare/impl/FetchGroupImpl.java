@@ -8,12 +8,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 import com.uncc.fairshare.connection.DbConnect;
 import com.uncc.fairshare.constants.CommonConstants;
 import com.uncc.fairshare.constants.NamedQueries;
 import com.uncc.fairshare.helper.FetchBillDetails;
 import com.uncc.fairshare.helper.FetchGroupDetails;
+import com.uncc.fairshare.helper.GroupBillDetails;
 import com.uncc.fairshare.intf.FetchGroupIntf;
 
 /**
@@ -78,6 +81,51 @@ public class FetchGroupImpl implements FetchGroupIntf {
 						fetchGroupObj.setGroupMemberMap(friendsMap);
 					}
 				}
+				//insert code for retrieving bill details
+				StringBuffer sBufQry = new StringBuffer(NamedQueries.SQL_FETCH_GROUP_BILLS);
+				PreparedStatement psPreState = conn.prepareStatement(sBufQry.toString());
+				
+				psPreState.setInt(1, fetchGroupObj.getGroupId());
+				
+				ResultSet rsBillObj = psPreState.executeQuery();
+				
+				if(null != rsBillObj){
+				//	while(rsBillObj.next()){
+					GroupBillDetails grpBillObj = null;
+					HashMap<Integer, GroupBillDetails> billMap = new HashMap<Integer, GroupBillDetails>();
+					int k=0;
+					while(rsBillObj.next()){
+						grpBillObj = new GroupBillDetails();
+						
+						
+						grpBillObj.setBillId(rsBillObj.getInt(CommonConstants.INT_INDEX_1));
+						grpBillObj.setGroupId(rsBillObj.getInt(CommonConstants.INT_INDEX_2));
+						grpBillObj.setOwedByEmail(rsBillObj.getString(CommonConstants.INT_INDEX_3));
+						grpBillObj.setOwedByName(rsBillObj.getString(CommonConstants.INT_INDEX_4));
+						grpBillObj.setAddedByEmail(rsBillObj.getString(CommonConstants.INT_INDEX_5));
+						grpBillObj.setBillShare(rsBillObj.getDouble(CommonConstants.INT_INDEX_6));
+						grpBillObj.setBillName(rsBillObj.getString(CommonConstants.INT_INDEX_7));
+						grpBillObj.setAddedByName(rsBillObj.getString(CommonConstants.INT_INDEX_8));
+						grpBillObj.setGroupName(rsBillObj.getString(CommonConstants.INT_INDEX_9));
+						k=k+1;
+						billMap.put(rsBillObj.getInt(CommonConstants.INT_INDEX_1)+k, grpBillObj);
+					}
+					fetchGroupObj.setGroupBillDetails(billMap);
+					
+					HashMap<Integer, GroupBillDetails> hashMapObj = new HashMap<Integer, GroupBillDetails>();
+					hashMapObj = fetchGroupObj.getGroupBillDetails();
+					
+					System.out.println(" Hashmap size --> "+hashMapObj.size());
+					Iterator iterate = hashMapObj.entrySet().iterator();
+					while(iterate.hasNext()){
+						Map.Entry pair = (Map.Entry) iterate.next();
+						System.out.println("key ---> "+ pair.getKey());
+						System.out.println("Name --> "+((GroupBillDetails)pair.getValue()).getOwedByName());
+					}
+				//}
+					
+				}
+				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

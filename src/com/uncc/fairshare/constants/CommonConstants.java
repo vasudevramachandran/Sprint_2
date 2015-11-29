@@ -8,9 +8,11 @@ package com.uncc.fairshare.constants;
  *
  */
 public class CommonConstants {
+	
+	public static final String EMPTY_STRING = "";
 
 	public static final int INT_SUCCESS = 1;
-	public static final int INT_FAIlURE = 0;
+	public static final int INT_FAILURE = 0;
 	public static final int INT_PARAMETER_INDEX = 1;
 	
 	public static final String USER_NAME = "userName";
@@ -34,7 +36,14 @@ public class CommonConstants {
 	public static final String JSP_GROUP_ID = "groupId";
 	public static final String JSP_SEL_GROUP_ID = "selectedGroupId";
 	public static final String JSP_SEL_HREF_NAME = "groupSelectHref";
-	public static final String  JSP_FETCH_GRP_OBJ = "groupDetailsObj";
+	public static final String JSP_FETCH_GRP_OBJ = "groupDetailsObj";
+	public static final String JSP_BILL_SPLIT = "billSplitVal";
+	public static final String JSP_SHARE = "share";
+	public static final String JSP_SPLIT_TYPE="billSplitType";
+	public static final String JSP_BILL_ID = "billId";
+	public static final String JSP_USER_ID = "userId";
+	public static final String JSP_NUM_USER = "numberOfUser";
+	public static final String JSP_SESSION_GROUP = "jspSessionGroupDetail";
 	
 	
 	public static final String SQL_BILL_ID = "BILL_ID";
@@ -57,6 +66,11 @@ public class CommonConstants {
 	public static final int INT_INDEX_8 = 8;
 	public static final int INT_INDEX_9 = 9;
 	public static final int INT_INDEX_10 = 10;
+	
+	public static final double DBL_VAL_0 = 0.0;
+	
+	public static final boolean BOOLEAN_TRUE = true	;
+	public static final boolean BOOLEAN_FALSE = false;
 	
 	public static final String ERR_LOGIN_ERR ="login_error";
 	
