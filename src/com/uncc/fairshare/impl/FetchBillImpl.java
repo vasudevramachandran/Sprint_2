@@ -84,12 +84,12 @@ public class FetchBillImpl implements FetchBillIntf{
 	}
 
 	@Override
-	public int deleteBill(String deleteId) {
+	public int deleteBill(int deleteId) {
 			
 		Connection conn = new DbConnect().getConnection();
 		int result = 0;
 		StringBuffer sBufQuery = new StringBuffer(" ");
-		sBufQuery.append(" DELETE FROM FRIENDS_BILL WHERE BILL_ID IN ("+deleteId+")");
+		sBufQuery.append(" DELETE FROM FRIENDS_BILL WHERE BILL_ID = "+deleteId+"");
 		
 		Statement stateObj = null;
 		try {

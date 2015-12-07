@@ -44,9 +44,11 @@
 	}
 
 </script>
-<link rel="stylesheet" type="text/css" href="../bootstrap/css/style.css" />
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/bootstrap/css/style.css" />
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/bootstrap/css/bootstrap.min.css" />
+
 <body>
-<%@include file= "logoutJsp.jsp"%>
+<%@include file= "sidenavbar.jsp"%>
 <div>
 	<!-- <div>
 		<table>
@@ -62,7 +64,7 @@
 		</table>
 	</div> -->
 </div>
-<%@include file="sidenavbar.jsp" %>
+
 
 	<div>
 		<h4 align="center">Friends List</h4>

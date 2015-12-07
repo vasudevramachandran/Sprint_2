@@ -50,7 +50,7 @@ public class DeleteBill extends HttpServlet {
 		int returnVal = 0;
 		if(null != request.getParameter("deleteId")){
 			
-			String deleteId = request.getParameter("deleteId");
+			int deleteId = Integer.parseInt(request.getParameter("deleteId"));
 			
 			FetchBillIntf fetchBillObj;
 			fetchBillObj = new FetchBillImpl();

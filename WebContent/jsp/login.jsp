@@ -8,6 +8,7 @@
 <meta charset="utf-8">
 <title>Welcome to fairSplit</title>
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/bootstrap/css/style.css" />
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/bootstrap/css/bootstrap.min.css" />
 <script>
 	function ValidateFields(){
 		var userName = document.getElementById("userName").value;

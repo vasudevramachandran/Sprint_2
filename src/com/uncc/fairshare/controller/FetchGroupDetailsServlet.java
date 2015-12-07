@@ -52,12 +52,12 @@ public class FetchGroupDetailsServlet extends HttpServlet {
 	private FetchGroupDetails fetchDetails(HttpServletRequest request, HttpServletResponse response){
 		
 		FetchGroupDetails fetchGroupObj = null;
-		if(null != request.getParameter(CommonConstants.JSP_SEL_GROUP_ID)){
+		if(null != request.getParameter(CommonConstants.JSP_GROUP_ID)){
 			
 			 fetchGroupObj = new FetchGroupDetails();
 			
 			fetchGroupObj.setGroupId(Integer.parseInt((String) 
-					request.getParameter(CommonConstants.JSP_SEL_GROUP_ID)));
+					request.getParameter(CommonConstants.JSP_GROUP_ID)));
 			
 			FetchGroupIntf fetchGroupIntf ;
 			fetchGroupIntf = new FetchGroupImpl();
@@ -65,7 +65,8 @@ public class FetchGroupDetailsServlet extends HttpServlet {
 			
 			if(fetchGroupObj.isValidFetch()){
 				
-				 RequestDispatcher reqDisp = request.getRequestDispatcher("/jsp/mygroup.jsp");
+				// RequestDispatcher reqDisp = request.getRequestDispatcher("/jsp/mygroup.jsp");
+				 RequestDispatcher reqDisp = request.getRequestDispatcher("/jsp/mygroupdetails.jsp");
 				 request.setAttribute(CommonConstants.JSP_FETCH_GRP_OBJ, fetchGroupObj);
 				 
 				 try {

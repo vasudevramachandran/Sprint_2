@@ -13,7 +13,7 @@
 <script src="<%=request.getContextPath() %>/bootstrap/js/jquery.js"></script>
 </head>
 <body>
-<%@include file="logoutJsp.jsp" %>
+
 <div class="">
 <div class="col-3-sm">
 	<%@include file="sidenavbar.jsp" %>

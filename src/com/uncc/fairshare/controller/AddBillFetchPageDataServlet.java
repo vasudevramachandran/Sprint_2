@@ -66,7 +66,7 @@ public class AddBillFetchPageDataServlet extends HttpServlet {
 		
 		request.setAttribute("friendsList", flListObj.getFriendsListMap());
 		
-		RequestDispatcher dispObj = request.getRequestDispatcher("/jsp/AddBills.jsp");
+		RequestDispatcher dispObj = request.getRequestDispatcher("/jsp/addbillforuser.jsp");
 		try {
 			dispObj.forward(request, response);
 		} catch (ServletException e) {

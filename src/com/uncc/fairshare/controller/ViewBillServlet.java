@@ -37,7 +37,7 @@ public class ViewBillServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		FetchBillDetails billDataObj = fetchBillData(request,response);
-		RequestDispatcher reqDispObj = request.getRequestDispatcher("/jsp/deletebillpage.jsp");
+		RequestDispatcher reqDispObj = request.getRequestDispatcher("/jsp/viewdeletebill.jsp");
 		
 		if(null!= billDataObj){
 			request.setAttribute("billDataObj", billDataObj);
@@ -71,7 +71,7 @@ public class ViewBillServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		FetchBillDetails billDataObj = fetchBillData(request,response);
-		RequestDispatcher reqDispObj = request.getRequestDispatcher("/jsp/deletebillpage.jsp");
+		RequestDispatcher reqDispObj = request.getRequestDispatcher("/jsp/viewdeletebill.jsp");
 		if(null!= billDataObj){
 			request.setAttribute("billDataObj", billDataObj);
 			try {

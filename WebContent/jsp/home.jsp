@@ -7,9 +7,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
-<link rel="stylesheet" type="text/css" href="../bootstrap/css/style.css" />
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/bootstrap/css/style.css" />
+<link href="<%=request.getContextPath() %>/bootstrap/css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body id="page-top" class="index">
 <!-- Header Navigation -->
 
 <!-- 	<div>
@@ -25,7 +33,7 @@
 		</table>
 	</div> -->
 	
-<%@include file= "logoutJsp.jsp"%>
+
 <%@include file="sidenavbar.jsp" %>	
 
 	<%
@@ -88,6 +96,18 @@
 			<%
 				}
 	%>
+	
+	 <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome To Our App!</div>
+                <!-- <div class="intro-heading">We help keep track of your expenses</div> -->
+               
+            </div>
+        </div>
+    </header>
+    
+    
 	
 </body>
 </html>

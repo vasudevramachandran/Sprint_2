@@ -68,7 +68,7 @@ public class FetchCreateGroupDetails extends HttpServlet {
 			friendsList = addBillObj.fetchFriends(friendsList);
 			
 			if(null != friendsList){
-				RequestDispatcher reqDisp = request.getRequestDispatcher("/jsp/creategroup.jsp");
+				RequestDispatcher reqDisp = request.getRequestDispatcher("/jsp/creategroups.jsp");
 				request.getSession(false).setAttribute(CommonConstants.JSP_FRIENDS_LIST, friendsList.getFriendsListMap());
 				try {
 					reqDisp.forward(request, response);

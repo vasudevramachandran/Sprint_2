@@ -14,6 +14,6 @@ public interface FetchBillIntf {
 	
 	public FetchBillDetails fetchBillForUser(FetchBillDetails billDataObj);
 	
-	public int deleteBill(String deleteId);
+	public int deleteBill(int deleteId);
 
 }

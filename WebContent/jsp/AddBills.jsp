@@ -99,7 +99,7 @@
 </script>
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/bootstrap/css/style.css" />
 <body>
-<%@include file= "logoutJsp.jsp"%>
+
 <div class="">
 <div class="">
 	<%@include file="sidenavbar.jsp" %>

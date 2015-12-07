@@ -46,7 +46,7 @@
 </head>
 <body>
 
-<%@include file= "logoutJsp.jsp"%>
+
 <div>
 <div>
 <%@include file="sidenavbar.jsp" %>
