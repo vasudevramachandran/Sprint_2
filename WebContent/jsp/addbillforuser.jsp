@@ -12,18 +12,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script type="text/javascript">
 	function createBillObj(){
-		alert("called");
+		//alert("called");
 		var index = 0;
 		
 		var billDesc = document.getElementById("billDescription");
 		if(billDesc.value == ""){
-			alert("Enter Bill Description");
+			//alert("Enter Bill Description");
 			billDesc.focus();
 			return false;
 		}
 		var billAmount = document.getElementById("billAmount");
 		if(billAmount.value == ""){
-			alert("Enter Bill Amount");
+			//alert("Enter Bill Amount");
 			billAmount.focus();
 			return false;
 		}
@@ -33,19 +33,19 @@
 		var userNameObj = document.getElementsByName("friendName")
 		for(i=0; i< elementObj.length ; i++){
 			
-			alert(elementObj[i].checked); 
+			//alert(elementObj[i].checked); 
 			
 			if(elementObj[i].checked){
-				alert(userIdObj[i].value);
+				//alert(userIdObj[i].value);
 				index = i+1;
 				break;
 			}
 		}
-		alert("after for  "+index);
-		if(index >= 0){
-			alert("after if")
+		//alert("after for  "+index);
+		if(index > 0){
+			//alert("after if")
 			var friendId = userIdObj[index].value;
-			alert(friendId);
+			//alert(friendId);
 			var friendName = userNameObj[index].value;
 			
 			document.getElementById("friendEmail").value = friendId;
@@ -62,7 +62,7 @@
 			    //theform.submit();
 			    return true;
 		}else{
-			alert("Select a friend to add the bill to ");
+			alert("Select a friend to add the bill 	");
 			return false;
 		}
 		return false;
@@ -112,7 +112,8 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">                                
                                 <div class="row-fluid user-row">
-									<h1 class="bg-primary center">Add  Bill</h1>
+									<h1><span class="glyphicon glyphicon-plus-sign"></span></h1>
+									<h1>Add  Bill</h1>
                                 </div>
                             </div>
                             <div class="panel-body">

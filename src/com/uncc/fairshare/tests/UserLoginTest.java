@@ -53,7 +53,7 @@ public class UserLoginTest extends TestCase {
 	 * Test method for {@link com.uncc.fairshare.impl.UserLoginImpl#validateUser(com.uncc.fairshare.helper.User)}.
 	 */
 	@Test
-	public void testValidateUser() {
+	private void ValidateUser() {
 		
 		User user = new User();
 		

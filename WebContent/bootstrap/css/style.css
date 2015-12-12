@@ -1066,10 +1066,15 @@ i {
 	background: white;
 }
 
-.logincustom{
+.logincustom {
 	background: grey;
 	border-radius: 50px;
-	padding-left: 300px
+	float: none !important;
+	padding-left: 300px !important;
+	
+}
+.glyphicon-plus-sign{
+	font-size: 75px !important;
 }
 
 .toppad{
@@ -1105,4 +1110,13 @@ i {
 
 .padding{
 	padding-left:20px;
+}
+
+.list-group-item.act{
+	color:#FFF !important;
+	background-color:#0066ff !important;
+	border-color:#0066ff !important;
+}
+.register-hov:hover{
+	cursor:pointer;
 }

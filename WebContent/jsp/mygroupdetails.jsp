@@ -39,7 +39,7 @@
 	
 <div class="col-sm-3 block-inline">
                <div class="list-group">
-                 <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createBill">   Add a bill     </a>
+                 <a class="" data-toggle="modal" data-target="#createBill"><span class="glyphicon glyphicon-plus-sign"></span></a>
                </div>
 </div>
 
